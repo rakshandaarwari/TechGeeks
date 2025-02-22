@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Book My Laughter</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Book<span class="highlight">MyLaughter</span> - Admin</div>
+    </header>
+    
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <button onclick="showSection('overview')">Overview</button>
+            <button onclick="showSection('users')">User Management</button>
+            <button onclick="showSection('events')">Event Approval</button>
+            <button onclick="showSection('analytics')">Analytics</button>
+        </div>
+        
+        <div class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section">
+                <h2>Dashboard Overview</h2>
+                <div class="overview-cards">
+                    <div class="card">Total Users: <span id="user-count">0</span></div>
+                    <div class="card">Total Events: <span id="event-count">0</span></div>
+                    <div class="card">Revenue: ₹<span id="revenue">0</span></div>
+
+                </div>
+            </section>
+            
+            <!-- User Management Section -->
+            <section id="users" class="dashboard-section hidden">
+                <h2>User Management</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-list"></tbody>
+                </table>
+            </section>
+            
+            <!-- Event Approval Section -->
+            <section id="events" class="dashboard-section hidden">
+                <h2>Event Approval</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="event-list"></tbody>
+                </table>
+            </section>
+            
+            <!-- Analytics Section -->
+            <section id="analytics" class="dashboard-section hidden">
+                <h2>Analytics</h2>
+                <canvas id="revenueChart"></canvas>
+            </section>
+        </div>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
