@@ -1,0 +1,310 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    color: #333;
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #ff841f; /* Fun orange color */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Content Styles */
+  main {
+    flex: 1;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  /* Analytics Section */
+  .analytics {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .card i {
+    font-size: 24px;
+    color: #007bff;
+  }
+  
+  /* Graph Section */
+  .graph {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Calendar Section */
+ 
+  
+  #calendar {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #calendar iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  /* Task Manager Container */
+  .tasks {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .tasks h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Task Input Section */
+  .task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .task-input input:focus {
+    border-color: #ff841f;
+  }
+  
+  .task-input button {
+    background: #ff841f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .task-input button:hover {
+    background: #e76f00;
+  }
+  
+  /* Task List */
+  #task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+  }
+  
+  #task-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #task-list li:hover {
+    background: #f9f9f9;
+  }
+  
+  /* Task Text */
+  .task-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Task Actions */
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .task-actions i {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .task-actions .complete-task {
+    color: #28a745; /* Green for complete task */
+  }
+  
+  .task-actions .complete-task:hover {
+    color: #218838;
+  }
+  
+  .task-actions .delete-task {
+    color: #dc3545; /* Red for delete task */
+  }
+  
+  .task-actions .delete-task:hover {
+    color: #c82333;
+  }
+  
+  /* My Venues Section */
+  .my-venues {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .venue-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .venue-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 40px);
+    transition: transform 0.3s ease;
+  }
+  
+  .venue-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .venue-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .venue-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .venue-card button {
+    background: #ff841f;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .venue-card button:hover {
+    background: #e76f00;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-btn:hover {
+    color: #ff841f;
+  }
+  
+  #modal-venue-name {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #ff841f;
+  }
+  
+  #modal-venue-description {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comedy Show Marketplace</title>
+  <link rel="stylesheet" href="location3.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header>
+      <h1>Comedy Show Marketplace</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Analytics Section -->
+      <section class="analytics">
+        <div class="card">
+          <h3>Active Enquiries</h3>
+          <p id="active-enquiries">12</p>
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="card">
+          <h3>Active Bookings</h3>
+          <p id="active-bookings">8</p>
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="card">
+          <h3>Active Users</h3>
+          <p id="active-users">45</p>
+          <i class="fas fa-users"></i>
+        </div>
+      </section>
+
+      <!-- Venue Booking Graph -->
+      <section class="graph">
+        <h2>Venue Booking Graph</h2>
+        <canvas id="bookingChart"></canvas>
+      </section>
+
+      <!-- My Venues Section -->
+      <section class="my-venues">
+        <h2>My Venues</h2>
+        <div class="venue-list">
+          <!-- Venue Cards -->
+          <div class="venue-card">
+            <h3>Canvas Laugh Club</h3>
+            <p>Capacity: Around 200 seats</p>
+            <p>Location: Palladium Mall, High Street Phoenix, Lower Parel, Mumbai.</p>
+            <button class="view-details-btn" data-venue="Canvas Laugh Club">View Details</button>
+          </div>
+          <div class="venue-card">
+            <h3>The Habitat</h3>
+            <p>Capacity: Around 100 seats</p>
+            <p>Location: Khar West, Mumbai</p>
+            <button class="view-details-btn" data-venue="The Habitat">View Details</button>
+          </div>
+          <div class="venue-card">
+            <h3>The Comedy Factory</h3>
+            <p>Capacity: Around 150 seats</p>
+            <p>Location: Kamala Mills, Lower Parel, Mumbai.</p>
+            <button class="view-details-btn" data-venue="The Comedy Factory">View Details</button>
+          </div>
+          <div class="venue-card">
+            <h3>Harkat Studios</h3>
+            <p>Capacity: Around 100 seats</p>
+            <p>Location: Andheri West, Mumbai.</p>
+            <button class="view-details-btn" data-venue="Harkat Studios">View Details</button>
+          </div>
+          <div class="venue-card">
+            <h3>The Cuckoo Club</h3>
+            <p>Capacity: Small and cozy, ideal for a relaxed comedy experience</p>
+            <p>Location: Bandra West, Mumbai</p>
+            <button class="view-details-btn" data-venue="The Cuckoo Club">View Details</button>
+          </div>
+          <div class="venue-card">
+            <h3>The Quarter</h3>
+            <p>Capacity: Medium-sized venue with around 200 seats</p>
+            <p>Location: Royal Opera House, Charni Road, Mumbai</p>
+            <button class="view-details-btn" data-venue="The Quarter">View Details</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendar Section -->
+      <section class="calendar">
+        <h2>Event Calendar</h2>
+        <div id="calendar"></div>
+      </section>
+
+      <!-- My Tasks Section -->
+      <section class="tasks">
+        <h2>My Tasks</h2>
+        <div class="task-input">
+          <input type="text" id="new-task" placeholder="Add a new task...">
+          <button id="add-task-btn"><i class="fas fa-plus"></i></button>
+        </div>
+        <ul id="task-list">
+          <li>
+            <span class="task-text">Approve Event Request</span>
+            <span class="task-actions">
+              <i class="fas fa-check-circle complete-task"></i>
+              <i class="fas fa-trash delete-task"></i>
+            </span>
+          </li>
+          <li>
+            <span class="task-text">Update Venue Capacity</span>
+            <span class="task-actions">
+              <i class="fas fa-check-circle complete-task"></i>
+              <i class="fas fa-trash delete-task"></i>
+            </span>
+          </li>
+          <li>
+            <span class="task-text">Contact Client for Booking</span>
+            <span class="task-actions">
+              <i class="fas fa-check-circle complete-task"></i>
+              <i class="fas fa-trash delete-task"></i>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Venue Details Modal -->
+  <div id="venue-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-venue-name"></h2>
+      <p id="modal-venue-description"></p>
+    </div>
+  </div>
+
+  <script src="location3.js"></script>
+</body>
+</html>
