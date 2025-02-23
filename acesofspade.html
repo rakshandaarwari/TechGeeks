@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aces of Spades Show Details</title>
+    <link rel="stylesheet" href="acesofspades.css">
+</head>
+<body>
+    <header>
+        <h1>Aces of Spades - Stand-up World</h1>
+        <a href="page1.html">Back to Home</a>
+    </header>
+
+    <section class="show-info">
+        <h2>About the Show</h2>
+        <p>'Aces of Spades' brings you the best of global stand-up comedy! Watch ace comedians take the stage and deliver punchlines like never before.</p>
+    </section>
+
+    <section class="artist-info">
+        <h2>Featured Artists</h2>
+        <ul>
+            <li>Kapil Sharma</li>
+            <li>Lilly Singh</li>
+        </ul>
+    </section>
+
+    <section class="reviews">
+        <h2>Audience Reviews</h2>
+        <ul id="reviewList">
+            <li>“Unforgettable performances! So much energy.” - Priya</li>
+            <li>“Top-tier comedy, I was in splits!” - Arjun</li>
+        </ul>
+
+        <h3>Add Your Review</h3>
+        <form id="reviewForm">
+            <input type="text" id="reviewText" placeholder="Write your review" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewList = document.getElementById('reviewList');
+
+        reviewForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const reviewText = document.getElementById('reviewText').value;
+            if (reviewText) {
+                const newReview = document.createElement('li');
+                newReview.textContent = reviewText + ' - You';
+                reviewList.appendChild(newReview);
+                document.getElementById('reviewText').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
