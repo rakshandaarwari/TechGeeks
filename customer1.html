@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Discovery Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="customer1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Dashboard</h1>
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <div class="filter-group">
+                <label for="dayFilter">Filter by Day:</label>
+                <select id="dayFilter">
+                    <option value="all">All Days</option>
+                    <option value="today">Today</option>
+                    <option value="tomorrow">Tomorrow</option>
+                    <option value="weekend">This Weekend</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="locationFilter">Filter by Location:</label>
+                <select id="locationFilter">
+                    <option value="all">All Locations</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="New-Delhi">New Delhi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Amritsar">Amritsar</option>
+                    <option value="Kochi">Kochi</option>
+                    <option value="Guwahati">Guwahati</option>
+                    <option value="Jaipur">Jaipur</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="genreFilter">Filter by Genre:</label>
+                <select id="genreFilter">
+                    <option value="all">All Genres</option>
+                    <option value="Stand-Up Comedy">Stand-Up Comedy</option>
+                    <option value="Sketch Comedy">Sketch Comedy</option>
+                    <option value="Themed Comedy Shows">Themed Comedy Shows</option>
+                    <option value="Regional and Cultural Comedy">Regional and Cultural Comedy</option>
+                    <option value="Interactive Comedy">Interactive Comedy</option>
+                    <option value="Clean Comedy">Clean Comedy</option>
+                    <option value="Adult Comedy">Adult Comedy</option>
+                    <option value="Puppet Comedy">Puppet Comedy</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="artistSearch">Search by Artist:</label>
+                <input type="text" id="artistSearch" placeholder="Enter artist name...">
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid" id="eventsContainer">
+            <!-- Event cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="customer1.js"></script>
+</body>
+</html>
