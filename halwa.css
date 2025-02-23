@@ -1,0 +1,53 @@
+/* halwa.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff7e6;
+    color: #333;
+}
+
+.navbar {
+    background: #ff6347;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.show-details img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.reviews {
+    padding: 20px;
+    background: #fff3cd;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.review {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    padding: 10px;
+    background: #ffa502;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff6347;
+}
